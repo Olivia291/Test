@@ -1,9 +1,15 @@
 {
   "manifest_version": 3,
   "name": "划词翻译",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "轻量化划词翻译插件 - 选中英文单词，显示中文释义、词性，支持英式发音",
   "permissions": [],
+  "host_permissions": [
+    "https://fanyi-api.baidu.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
